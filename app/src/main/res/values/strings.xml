@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">TwitterClicen</string>
+    <string name="app_name">Facebook Client App</string>
+    <string name="user_account_type">com.vfergus.facebookclient.ACCOUNT</string>
+
+    <string name="facebook_app_id">583430502013440</string>
+    <string name="fb_login_protocol_scheme">fb583430502013440</string>
+
+    <!-- message error -->
+    <string name="message_error_operation_canceled">Operation is canceled</string>
+    <string name="message_error_auth">Произошла ошибка, повторите попытку позже.</string>
+    <string name="message_error_unknown">Произошла ошибка. Попробуйте позже.</string>
+
+    <!-- login screen -->
+    <string name="login_screen_subtitle">Войдите в приложение, используя учетную запись Facebook</string>
+    <string name="login_with_fb">Log In with Facebook</string>
+
+    <string name="message_no_content">Постов нет</string>
+
+    <string name="updated_date_format_large">dd MMM yyyy \'в\' HH:mm </string>
+    <string name="updated_date_format_now">Сейчас</string>
+    <string name="updated_date_format_minutes_ago">%1$d мин</string>
+    <string name="updated_date_format_hours_ago">%1$d ч.</string>
 </resources>

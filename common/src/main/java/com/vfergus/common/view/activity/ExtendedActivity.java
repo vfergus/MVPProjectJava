@@ -18,14 +18,11 @@ import lombok.val;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-import rx.Observable;
-import rx.subjects.BehaviorSubject;
-
-import com.trello.rxlifecycle.LifecycleProvider;
-import com.trello.rxlifecycle.LifecycleTransformer;
-import com.trello.rxlifecycle.RxLifecycle;
-import com.trello.rxlifecycle.android.ActivityEvent;
-import com.trello.rxlifecycle.android.RxLifecycleAndroid;
+import com.trello.rxlifecycle2.LifecycleProvider;
+import com.trello.rxlifecycle2.LifecycleTransformer;
+import com.trello.rxlifecycle2.RxLifecycle;
+import com.trello.rxlifecycle2.android.ActivityEvent;
+import com.trello.rxlifecycle2.android.RxLifecycleAndroid;
 import com.vfergus.common.event.Events;
 import com.vfergus.common.event.eventArgs.ActivityResultEventArgs;
 import com.vfergus.common.event.eventArgs.BundleEventArgs;
@@ -33,6 +30,9 @@ import com.vfergus.common.event.eventArgs.PermissionResultEventArgs;
 import com.vfergus.common.event.generic.Event;
 import com.vfergus.common.event.notice.NoticeEvent;
 import com.vfergus.common.view.ViewBinder;
+
+import io.reactivex.Observable;
+import io.reactivex.subjects.BehaviorSubject;
 
 @Accessors(prefix = "m")
 public abstract class ExtendedActivity extends AppCompatActivity
@@ -108,7 +108,7 @@ public abstract class ExtendedActivity extends AppCompatActivity
     @NonNull
     @CheckResult
     public final Observable<ActivityEvent> lifecycle() {
-        return getLifecycleSubject().asObservable();
+        return getLifecycleSubject();
     }
 
     @Override

@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.support.annotation.Nullable;
 
 import lombok.Getter;
+import lombok.ToString;
 
+@ToString
 public class ActivityResultEventArgs {
     public ActivityResultEventArgs(
         final int requestCode, final int resultCode, @Nullable final Intent data) {
